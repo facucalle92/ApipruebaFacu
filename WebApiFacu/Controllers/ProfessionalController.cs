@@ -38,7 +38,7 @@ namespace WebApiFacu.WebAPi.Controllers
         {
             context.Profesionales.Add(prof);
             context.SaveChanges();
-            return new CreatedAtRouteResult("Profesional por id", new { id = prof.Id }, prof);
+            return new CreatedAtRouteResult("ObtenerProfesioalPorId", new { id = prof.Id }, prof);
         }
         [HttpPut("{id}")]
         public ActionResult<Professional> Put(int id, [FromBody] Professional prof)
